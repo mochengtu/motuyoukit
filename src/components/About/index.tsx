@@ -11,8 +11,7 @@ type GetProps = IProps & any;
 const Index: FC = memo<IProps>((props: GetProps) => {
   const [loading, setLoading] = useState<boolean>(true);
 
-  const onChange = useCallback<boolean>((checked: boolean): void => {
-    console.log("checked: ", checked)
+  const onChange = useCallback<boolean & any>((checked: boolean): void => {
     setLoading(!checked);
   }, [loading]);
 
@@ -29,7 +28,9 @@ const Index: FC = memo<IProps>((props: GetProps) => {
       </Card>
 
       {/* 骨架屏 */}
+
       <Switch checked={!loading} onChange={onChange} />
+
       <Card
         style={{ width: 300, marginTop: 16 }}
         actions={[
