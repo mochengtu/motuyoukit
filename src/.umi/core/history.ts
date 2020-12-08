@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory } from '/Users/lm259/Codes/PrivateKit/ReactEggkit/client/node_modules/@umijs/preset-built-in/node_modules/@umijs/runtime';
+import { createBrowserHistory } from '/Users/lm259/Codes/PrivateKit/EggKit/ReactEgg/client/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"

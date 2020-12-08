@@ -4,8 +4,8 @@ import '@@/core/devScripts';
 import { plugin } from './core/plugin';
 import './core/pluginRegister';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from '/Users/lm259/Codes/PrivateKit/ReactEggkit/client/node_modules/@umijs/preset-built-in/node_modules/@umijs/runtime';
-import { renderClient } from '/Users/lm259/Codes/PrivateKit/ReactEggkit/client/node_modules/@umijs/renderer-react/dist/index.js';
+import { ApplyPluginsType } from '/Users/lm259/Codes/PrivateKit/EggKit/ReactEgg/client/node_modules/@umijs/runtime';
+import { renderClient } from '/Users/lm259/Codes/PrivateKit/EggKit/ReactEgg/client/node_modules/@umijs/renderer-react/dist/index.js';
 import { getRoutes } from './core/routes';
 
 
@@ -23,6 +23,7 @@ const getClientRender = (args: { hot?: boolean; routes?: any[] } = {}) => plugin
         plugin,
         history: createHistory(args.hot),
         isServer: process.env.__IS_SERVER,
+        dynamicImport: true,
         rootElement: 'root',
         defaultTitle: ``,
       },
@@ -37,7 +38,7 @@ export default clientRender();
 
 
     window.g_umi = {
-      version: '3.2.28',
+      version: '3.3.0',
     };
   
 
